@@ -304,7 +304,7 @@ def login_view(request):
 
     return render(request, 'myauth/login.html',{'status':0})
 
-login_required
+@login_required
 def logout_view(request):
     logout(request)
     return HttpResponseRedirect("/accounts/login")
